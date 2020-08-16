@@ -23,10 +23,10 @@ class Converter(object):
             if not line.startswith("*"):
                 continue
 
-            segments = line.split(" ", 2)
+            segments = line.split(" ")
             title_level = self._get_title_level(segments[0])
             status, index = self._get_status(segments[1])
-            content = "".join(segments[index:])
+            content = " ".join(segments[index:])
 
             org_lines.append(OrgLine(title_level, status, content))
 

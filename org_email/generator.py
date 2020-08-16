@@ -34,8 +34,6 @@ class Generator(object):
         stack = [tree]
 
         for line in self.lines:
-            print(f"line: {line}")
-            print(f"stack: {stack}")
             node = OrgTree(line, [])
             if line.title_level > stack[-1].line.title_level:
                 if len(stack) >= 1:
@@ -48,8 +46,8 @@ class Generator(object):
             elif line.title_level < stack[-1].line.title_level:
                 stack.pop()
                 stack[-1] = node
-                if len(stack) >= 2:
-                    stack[-2].children.append(node)
+                if len(stack) > line.title_level - 2:
+                    stack[line.title_level-2].children.append(node)
 
         self.build_doc(stack[0])
 
