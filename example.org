@@ -1,0 +1,15 @@
+* Task
+** Category A
+*** TODO task A
+*** DONE task B
+    CLOSED: [2020-08-16 Sun 23:46]
+
+*** DONE task C
+    CLOSED: [2020-08-16 Sun 23:46]
+
+**** finished but need more monitor and alter
+*** TODO Task D
+    
+** Category B
+*** TODO task E
+*** TODO task F

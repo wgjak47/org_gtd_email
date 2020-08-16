@@ -17,7 +17,6 @@ class OrgTree(object):
     line: OrgLine
     children: List['OrgLine']
 
-
 class Generator(object):
     lines: List[OrgLine]
 
@@ -44,8 +43,8 @@ class Generator(object):
                 if len(stack) >= 2:
                     stack[-2].children.append(node)
             elif line.title_level < stack[-1].line.title_level:
-                stack.pop()
-                stack[-1] = node
+                stack[line.title_level-1] = node
+                stack = stack[0:line.title_level]
                 if len(stack) > line.title_level - 2:
                     stack[line.title_level-2].children.append(node)
 

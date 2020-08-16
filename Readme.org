@@ -1,0 +1,22 @@
+* Org GTD Email
+this script is used to convert my task managed by org mode to gmail compatible html.
+since my boss dislike me to send picture instead of text.
+
+** Why not use org export to html
+I dislike it's style, need external css, but gmail don't support it.
+And it will auto add num in each headline, which I don't find a way to change 
+this behavior.
+
+** How to use
+#+begin_src python 
+pip install -r requirements.txt
+./main.py --input {org source} --output {html}
+#+end_src
+
+then you can open the html by firefox or chrome and copy content to gmail input box.
+
+** Exmaple
+check the exmaple.org and example.html
+
+** Thanks
+thanks for [[https://www.yattag.org/][yattag]] and [[https://click.palletsprojects.com/en/7.x/][click]], save me a lot of time.
