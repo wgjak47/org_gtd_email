@@ -8,7 +8,8 @@ from dataclasses import dataclass
 
 color_map = {
     "TODO": "color:blue",
-    "DONE": "color:green"
+    "DONE": "color:green",
+    "HOLD": "color:red",
 }
 
 

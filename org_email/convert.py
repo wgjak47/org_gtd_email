@@ -40,4 +40,6 @@ class Converter(object):
             return "DONE", 2
         if segment == "TODO":
             return "TODO", 2
+        if segment == "HOLD":
+            return "HOLD", 2
         return "", 1
